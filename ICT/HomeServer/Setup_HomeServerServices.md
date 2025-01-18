@@ -1,5 +1,11 @@
 # Enable services
 
+## TODO:
+
+user ...
+
+## remote desktop - ms viewer, vnc or
+
 ## FTP
 
 Sure, I can help you with that! Here are the steps to enable FTP and SSH services on an Ubuntu server:
