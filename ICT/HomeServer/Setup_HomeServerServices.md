@@ -200,6 +200,77 @@ For further customization, you can run the Powerlevel10k configuration wizard:
 p10k configure
 ```
 
-These steps will set up a new user profile with Oh My Zsh and a rich color scheme. If you have any more questions or need further assistance, feel free to ask!
+## install app
+
+### install Google Chrome
+
+To install Google Chrome on your Ubuntu system, follow these steps:
+
+### 1. **Download the Chrome .deb Package**
+1. Open your current web browser (e.g., Firefox).
+2. Go to the Google Chrome download page.
+3. Click on the **Download Chrome** button.
+4. Select the **64 bit .deb (for Debian/Ubuntu)** option and click **Accept and Install**.
+5. Save the file to your Downloads folder.
+
+### 2. **Install the Chrome .deb Package**
+1. Open a terminal window (you can use `Ctrl+Alt+T`).
+2. Navigate to the Downloads folder:
+   ```bash
+   cd ~/Downloads
+   ```
+3. Install the downloaded package using the following command:
+   ```bash
+   sudo apt install ./google-chrome-stable_current_amd64.deb
+   ```
+4. If there are any dependency errors, fix them with:
+   ```bash
+   sudo apt install -f
+   ```
+
+### 3. **Launch Google Chrome**
+Once the installation is complete, you can launch Google Chrome from the applications menu or by typing `google-chrome` in the terminal.
+
+### Additional Tips
+- **Set Chrome as Default Browser:** When you first launch Chrome, you can choose to set it as your default browser.
+- **Sync with Google Account:** Sign in with your Google account to sync bookmarks, history, and settings across devices.
+
+
+### How to install Edge
+
+The warning you're seeing indicates that `apt-key` is deprecated. Instead, you should manage keyring files in the `/etc/apt/trusted.gpg.d` directory. Here's how you can do it:
+
+1. **Download the Microsoft GPG key**:
+   ```bash
+   curl -sSL https://packages.microsoft.com/keys/microsoft.asc -o microsoft.asc
+   ```
+
+2. **Move the key to the trusted.gpg.d directory**:
+   ```bash
+   sudo mv microsoft.asc /etc/apt/trusted.gpg.d/microsoft.asc
+   ```
+
+3. **Add the Microsoft Edge repository**:
+   ```bash
+   sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+   ```
+
+4. **Update your package list**:
+   ```bash
+   sudo apt update
+   ```
+
+5. **Install Microsoft Edge**:
+   ```bash
+   sudo apt install microsoft-edge-stable
+   ```
+
+This method ensures that the key is managed in a more secure and recommended way¹(https://itsfoss.com/apt-key-deprecated/)²(https://www.linuxuprising.com/2021/01/apt-key-is-deprecated-how-to-add.html).
+
+Let me know if you need any further assistance!
+
+Source: Conversation with Copilot, 18/01/2025
+(1) [Fixed] apt-key is deprecated. Manage keyring files in trusted.gpg.d. https://itsfoss.com/apt-key-deprecated/.
+(2) apt-key Is Deprecated. How To Add OpenPGP Repository Signing Keys .... https://www.linuxuprising.com/2021/01/apt-key-is-deprecated-how-to-add.html.
 
 ## NAS
